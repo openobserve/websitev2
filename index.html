@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ZincSearch - A modern search engine</title>
+
+	<meta name="title" content="ZincSearch - A modern search engine">
+	<meta name="description"
+		content="ZincSearch is the simplest and easiest search system to get up and running. It's an open source easy-to-use search engine to solves your observability needs.">
+	<meta name="keywords" content="ZincSearch, ZincLabs, Zinc, Search, Search Engine, Search System">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="English">
+	<meta name="revisit-after" content="5 days">
+	<meta name="author" content="Prabhat Sharma, Hengfei Yang">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="./assets/favicons/site.webmanifest">
+	<link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5ca380">
+	<link rel="shortcut icon" href="./assets/favicons/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="ZincSearch">
+	<meta name="application-name" content="ZincSearch">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="./assets/favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="./assets/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="./assets/css/base.css" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/main.css" type="text/css" />
+	<link rel="stylesheet" href="./assets/css/carousel.css" type="text/css" />
+</head>
+
+<body>
+	<div style="top: 0; z-index: 1000;">
+		Banner
+		
+	</div>
+	<div class="root">
+		<header>
+			<div class="container">
+				<div class="logo">
+					<a rel="noreferrer noopener" href="./">
+						<img src="./assets/images/common/logo.svg" alt="ZincSearch Logo" />
+					</a>
+				</div>
+				<nav>
+					<div class="desktop">
+						<div class="github_actions">
+							<a rel="noreferrer noopener" class="github-button" href="https://github.com/zinclabs/zinc"
+								data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large"
+								data-show-count="true" aria-label="Star zinclabs/zinc on GitHub"></a>
+
+							<a rel="noreferrer noopener" class="github-button" href="https://github.com/zinclabs/zinc/fork"
+								data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-repo-forked"
+								data-size="large" data-show-count="true" aria-label="Fork zinclabs/zinc on GitHub"></a>
+						</div>
+						<ul>
+							<li class="active"><a rel="noreferrer noopener" href="./">Home</a></li>
+							<li><a rel="noreferrer noopener" href="./views/about-us/">About Us</a></li>
+							<li><a rel="noreferrer noopener" href="./views/use-cases/">Use Cases</a></li>
+							<li><a rel="noreferrer noopener" href="./views/contact-us/">Contact Us</a></li>
+							<li><a rel="noreferrer noopener" href="./views/careers/">Careers</a></li>
+							<li><a rel="noreferrer noopener" href="https://docs.zincsearch.com/">Docs</a></li>
+							<li class="getStarted">
+								<a rel="noreferrer noopener" href="https://docs.zincsearch.com/" class="btn btn--primary btn--short">Get
+									Started</a>
+							</li>
+						</ul>
+					</div>
+					<div class="tabAndbelow">
+						<template id="githubButtonsTemplate">
+							<a rel="noreferrer noopener" class="github-button" href="https://github.com/zinclabs/zinc"
+								data-color-scheme="no-preference: light; light: light; dark: light;" data-show-count="true"
+								aria-label="Star zinclabs/zinc on GitHub"></a>
+
+							<a rel="noreferrer noopener" class="github-button" href="https://github.com/zinclabs/zinc/fork"
+								data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-repo-forked"
+								data-show-count="true" aria-label="Fork zinclabs/zinc on GitHub"></a>
+						</template>
+						<div class="tabAndbelow__actions">
+							<div id="githubButtonsContainer"></div>
+							<div class="hamburger-menu">
+								<span class="line line__one"></span>
+								<span class="line line__two"></span>
+								<span class="line line__three"></span>
+							</div>
+						</div>
+						<div class="mobile-menu">
+							<div class="container">
+								<ul>
+									<li class="active"><a rel="noreferrer noopener" href="./">Home</a></li>
+									<li><a rel="noreferrer noopener" href="./views/about-us/">About Us</a></li>
+									<li><a rel="noreferrer noopener" href="./views/use-cases/">Use Cases</a></li>
+									<li><a rel="noreferrer noopener" href="./views/contact-us/">Contact Us</a></li>
+									<li><a rel="noreferrer noopener" href="./views/careers/">Careers</a></li>
+									<li><a rel="noreferrer noopener" href="https://docs.zincsearch.com/">Docs</a></li>
+									<li class="getStarted">
+										<a rel="noreferrer noopener" href="https://docs.zincsearch.com/"
+											class="btn btn--primary btn--short">Get
+											Started</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main id="home">
+			<section class="home-banner">
+				<div class="carousel-container">
+					<div class="carousel carousel--translate" data-autoplay="true" data-interval="5000" data-current-slide="0">
+						<input class="carousel__activator" type="radio" name="carousel" id="A" value="0" checked="checked" />
+						<input class="carousel__activator" type="radio" name="carousel" id="B" value="1" />
+						<input class="carousel__activator" type="radio" name="carousel" id="C" value="2" />
+						<div class="carousel__track">
+							<li class="carousel__slide">
+								<div class="container">
+									<div class="container__left">
+										<h1 class="head">Tired Of High Cost And Complexity Of Your Log Systems</h1>
+										<a rel="noreferrer noopener" href="https://docs.zincsearch.com/" class="cta btn btn--primary">Get
+											Started</a>
+									</div>
+									<div class="container__right">
+										<picture class="pic-one">
+											<source media="(max-width:1199px)" srcset="./assets/images/home/banner_1.png" />
+											<source media="(min-width:1200px)" srcset="./assets/images/home/banner_1_2x.png" />
+											<img src="./assets/images/home/banner_1.png" alt="Home Banner 1" />
+										</picture>
+									</div>
+								</div>
+							</li>
+							<li class="carousel__slide">
+								<div class="container">
+									<div class="container__left">
+										<h1 class="head">Implement Search In Your Applications In Minutes</h1>
+										<a rel="noreferrer noopener" href="https://docs.zincsearch.com/" class="cta btn btn--primary">Get
+											Started</a>
+									</div>
+									<div class="container__right">
+										<picture class="pic-two">
+											<source media="(max-width:1199px)" srcset="./assets/images/home/banner_2.png" />
+											<source media="(min-width:1200px)" srcset="./assets/images/home/banner_2_2x.png" />
+											<img src="./assets/images/home/banner_2.png" alt="Home Banner 2" />
+										</picture>
+									</div>
+								</div>
+							</li>
+							<li class="carousel__slide">
+								<div class="container">
+									<div class="container__left">
+										<h1 class="head">
+											<div class="light">A Perfect</div> Edge Search Solution
+										</h1>
+										<a rel="noreferrer noopener" href="https://docs.zincsearch.com/" class="cta btn btn--primary">Get
+											Started</a>
+									</div>
+									<div class="container__right">
+										<picture class="pic-three">
+											<source media="(max-width:1199px)" srcset="./assets/images/home/banner_3.png" />
+											<source media="(min-width:1200px)" srcset="./assets/images/home/banner_3_2x.png" />
+											<img src="./assets/images/home/banner_3.png" alt="Home Banner 3" />
+										</picture>
+									</div>
+								</div>
+							</li>
+						</div>
+						<div class="carousel__indicators">
+							<div class="container">
+								<label class="carousel__indicator" for="A"></label>
+								<label class="carousel__indicator" for="B"></label>
+								<label class="carousel__indicator" for="C"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="features" id="features">
+				<div class="container">
+					<div class="head">
+						<h2>ZincSearch Features</h2>
+						<p>It provides a host of features that help you to get up and running in minutes.</p>
+					</div>
+
+					<div class="content">
+						<div class="card card--feature">
+							<div class="card__icon">
+								<img src="./assets/images/home/feature_1.svg" alt="Feature 1" />
+							</div>
+							<div class="card__head">Full Text Search</div>
+							<div class="card__content">
+								<p>You can index large amounts of text Zinc and search instantly</p>
+							</div>
+						</div>
+
+						<div class="card card--feature">
+							<div class="card__icon">
+								<img src="./assets/images/home/feature_2.svg" alt="Feature 2" />
+							</div>
+							<div class="card__head">Embedded Web UI</div>
+							<div class="card__content">
+								<p>
+									Zinc is a batteries-included setup.
+									Embedded UI provides an easy way to get started and interact with your data.
+									No need to set up a separate GUI like kibana.
+								</p>
+							</div>
+						</div>
+
+						<div class="card card--feature">
+							<div class="card__icon">
+								<img src="./assets/images/home/feature_3.svg" alt="Feature 3" />
+							</div>
+							<div class="card__head">Compatibility with Elasticsearch API</div>
+							<div class="card__content">
+								<p>
+									Ingestion and Search APIs are elasticsearch compatible so you could easily migrate applications. Docs coming soon.
+								</p>
+							</div>
+						</div>
+
+						<div class="card card--feature">
+							<div class="card__icon">
+								<img src="./assets/images/home/feature_4.svg" alt="Feature 4" />
+							</div>
+							<div class="card__head">Schemaless Indexes</div>
+							<div class="card__content">
+								<p>
+									No need to work hard to define schema ahead of time.
+									ZincSearch automatically discovers schema so you can focus on search and analysis.
+								</p>
+							</div>
+						</div>
+
+						<div class="card card--feature">
+							<div class="card__icon">
+								<img src="./assets/images/home/feature_5.svg" alt="Feature 5" />
+							</div>
+							<div class="card__head">S3 and MinIO for index storage (experimental)</div>
+							<div class="card__content">
+								<p>Store data in S3 and MinIO for low cost, virtually infinite
+									durable storage without the hassle of managing storage.
+								</p>
+							</div>
+						</div>
+
+						<div class="card card--feature">
+							<div class="card__icon">
+								<img src="./assets/images/home/feature_6.svg" alt="Feature 6" />
+							</div>
+							<div class="card__head">Aggregations</div>
+							<div class="card__content">
+								<p>Do faceted search and analyze your data.</p>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<!--<section class="video">
+				<div class="container">
+					<div class="content">
+						<button type="button" class="btn-show-modal" id="show-video-modal">
+							<div class="play-icon">
+								<img src="./assets/images/home/video_play_icon.svg" alt="Play icon" />
+							</div>
+							<img src="./assets/images/home/video_mask.png" alt="Home banner" />
+						</button>
+
+						<div class="modal" id="video-modal" data-close-ouotside="true">
+							<div class="modal__container">
+								<button class="modal__close" id="close-modal">
+									<img src="./assets/images/home/close_icon.svg" alt="Close icon" />
+								</button>
+								<div class="modal__content">
+									<iframe id="iFrame" width="100%" height="470"
+										src="https://www.youtube.com/embed/hQAHSlTtcmY?enablejsapi=1"></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>-->
+
+			<section class="demo" id="demo">
+				<div class="container">
+					<div class="content">
+						<div class="content__left">
+							<img src="./assets/images/home/demo_snapshot.png" alt="ZincSearch Demo" />
+						</div>
+						<div class="content__right">
+							<h2>ZincSearch Demo</h2>
+							<button type="button" class="btn btn--tall btn--secondary" id="show-video-modal">Demo</button>
+						</div>
+					</div>
+				</div>
+				<div class="modal" id="video-modal" data-close-ouotside="true">
+					<div class="modal__container">
+						<button class="modal__close" id="close-modal">
+							<img src="./assets/images/home/close_icon.svg" alt="Close Icon" />
+						</button>
+						<div class="modal__content">
+							<iframe id="iFrame" width="100%" height="470"
+								src="https://www.youtube.com/embed/aZXtuVjt1ow?enablejsapi=1"></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="codeSection">
+				<div class="container">
+					<div class="content__left">
+						<div class="head">
+							<h2>ZincSearch is built for Full Text Search</h2>
+							<p>
+								ZincSearch is a search engine that can be used for any kind of text data.
+								It can be used for logs, metrics, events, and more. It allows you to
+								do full text search among other things. e.g. Send server logs to
+								ZincSearch for them or you can push your application data and
+								provide full text search or you can build a search bar in your
+								application using ZincSearch.
+							</p>
+						</div>
+						<div class="content">
+							<div class="card card--codeSection">
+								<div class="card__icon">
+									<img src="./assets/images/home/code_icon_1.svg" alt="Code Icon 1" />
+								</div>
+								<div class="card__head">Easy to Setup & Operate</div>
+								<div class="card__content">
+									<p>
+										ZincSearch provides the easiest way to
+										get started with log capture, search and
+										analysis. It has simple APIs to interact and
+										integrates with leading log forwarders
+										allowing you to get operational in minutes.
+									</p>
+								</div>
+							</div>
+
+							<div class="card card--codeSection">
+								<div class="card__icon">
+									<img src="./assets/images/home/code_icon_2.svg" alt="Code Icon 2" />
+								</div>
+								<div class="card__head">Low resource requirements</div>
+								<div class="card__content">
+									<p>
+										It uses far less CPU and RAM compared
+										to alternatives allowing for lower cost to
+										run. Developers can even run it on their
+										laptops without ever noticing its resource utilization.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content__right">
+						<img src="./assets/images/home/code_snapshot.png" alt="Code image" />
+					</div>
+				</div>
+			</section>
+
+			<section class="faqs" id="faqs">
+				<div class="container">
+					<div class="head">
+						<h2>Frequently Asked Questions</h2>
+						<p>
+							Everything you need to know so you can use ZincSearch as a FastSearch.
+						</p>
+					</div>
+
+					<div class="content faqs__container" id="collapsible_parent_container">
+						<div class="faq faq__one collapsible">
+							<h3 class="faq__head">
+								<div class="faq__head__label">What can I use ZincSearch for?</div>
+								<button class="faq__head__action collapsible__head__action"></button>
+							</h3>
+							<div class="faq__body">
+								<p>
+									ZincSearch is a search engine that can be used for indexing any kind of textual data.
+									It can be used for logs, metrics, events, and more.
+									It allows you to do full text search among other things.
+									e.g. Send server logs to ZincSearch and search for them, or you can
+									push your application data and provide full text search in your app.
+								</p>
+							</div>
+						</div>
+
+						<div class="faq faq__two collapsible collapsible--collapsed">
+							<h3 class="faq__head">
+								<div class="faq__head__label">Can I replace Elasticsearch with ZincSearch?</div>
+								<button class="faq__head__action collapsible__head__action"></button>
+							</h3>
+							<div class="faq__body">
+								<p>
+									ZincSearch provides Elasticsearch compatible ingestion APIs. So you can change
+									the configuration (URL and authentication data) of your existing tools
+									(fluent bit, vector, syslog-ng, etc) that are sending data to Elasticsearch and
+									it will start working right away. To view the data you will have to use either
+									ZincSearch UI or ZincSearch APIs. ZincSearch currently does not provide an Elasticsearch
+									compatible query API, however we are working towards making it compatible.
+								</p>
+							</div>
+						</div>
+
+						<div class="faq faq__three collapsible collapsible--collapsed">
+							<h3 class="faq__head">
+								<div class="faq__head__label">Can ZincSearch be deployed in HA(Highly Available / Cluster) mode?</div>
+								<button class="faq__head__action collapsible__head__action"></button>
+							</h3>
+							<div class="faq__body">
+								<p>
+									Currently, No. We are working towards making ZincSearch Highly Available.
+								</p>
+							</div>
+						</div>
+
+						<div class="faq faq__four collapsible collapsible--collapsed">
+							<h3 class="faq__head">
+								<div class="faq__head__label">Can I store index data in S3 or MinIO?</div><button
+									class="faq__head__action collapsible__head__action"></button>
+							</h3>
+							<div class="faq__body">
+								<p>
+									Yes. ZincSearch supports S3 and MinIO for index storage. Metadata is still stored on local disk though
+									at this time.
+								</p>
+							</div>
+						</div>
+
+						<div class="faq faq__five collapsible collapsible--collapsed">
+							<h3 class="faq__head">
+								<div class="faq__head__label">Are there any performance benchmarks available for ZincSearch?</div>
+								<button class="faq__head__action collapsible__head__action"></button>
+							</h3>
+							<div class="faq__body">
+								<p>
+									Currently, No. We will soon publish benchmarks.
+								</p>
+							</div>
+						</div>
+
+						<div class="faq faq__six collapsible collapsible--collapsed">
+							<h3 class="faq__head">
+								<div class="faq__head__label">Do we have SDK's available for ZincSearch?</div>
+								<button class="faq__head__action collapsible__head__action"></button>
+							</h3>
+							<div class="faq__body">
+								<p>
+									Currently No. We are working towards making the SDKs available. You are recommended
+									to use ZincSearch REST APIs for now.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--<section class="companies noPadding">
+				<div class="container">
+					<img src="./assets/images/Image 19.png" alt="Companies" />
+				</div>
+			</section>-->
+
+			<section class="subscribe">
+				<div class="container">
+					<div class="head">
+						<h2>Subscribe to our Newsletters</h2>
+						<p>
+							Get Latest Update &amp; News
+						</p>
+					</div>
+					<form action="/" method="post" id="subscription-form">
+						<input type="email" name="email" id="email" placeholder="Enter your email ID" autocomplete="off"
+							onkeyup="handleInputUpdate(event)" />
+						<button type="submit" class="btn btn--tall btn--primary">
+							<i class="fa fa-circle-o-notch fa-spin"></i>
+							<span>Submit</span>
+						</button>
+					</form>
+				</div>
+			</section>
+
+			<!--<section class="subscribe">
+				<div class="container">
+					<div class="head">
+						<h2>Talk to Us !!</h2>
+					</div>
+					<a rel="noreferrer noopener"href="views/contact-us/" class="btn btn--tall btn--primary">Get In Touch</a>
+				</div>
+			</section>-->
+		</main>
+
+		<footer>
+			<section class="topFooter">
+				<div class="container">
+					<div class="column">
+						<div class="head">
+							<div class="logo">
+								<a rel="noreferrer noopener" href="./">
+									<img src="./assets/images/common/logo.svg" alt="ZincSearch Logo" />
+								</a>
+							</div>
+						</div>
+						<div class="content">
+							<p>315 Montgomery St, 10th Floor,</p>
+							<p class="noMargin">San Francisco,</p>
+							<p class="noMargin">California, 94104,</p>
+							<p class="noMargin">United States of America</p>
+							<p>
+								<a rel="noreferrer noopener" class="bottomBorderHover" href="tel:+14154296096">+1 (415) 429-6096</a>
+							</p>
+							<p class="noMargin">
+								<a rel="noreferrer noopener" class="bottomBorderHover"
+									href="mailto:hello+zincsearch@zinclabs.io">hello+zincsearch@zinclabs.io</a>
+							</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="head">
+							<h4>Quick Links</h4>
+						</div>
+						<div class="content">
+							<ul>
+								<li><a rel="noreferrer noopener" class="bottomBorderHover" href="./">Home</a></li>
+								<li><a rel="noreferrer noopener" class="bottomBorderHover" href="./views/about-us/">About Us</a></li>
+								<li><a rel="noreferrer noopener" class="bottomBorderHover" href="./views/use-cases/">Use Cases</a></li>
+								<li><a rel="noreferrer noopener" class="bottomBorderHover" href="./views/contact-us/">Contact Us</a>
+								</li>
+								<li><a rel="noreferrer noopener" class="bottomBorderHover" href="./views/careers/">Careers</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="column">
+						<div class="head">
+							<h4>Docs</h4>
+						</div>
+						<div class="content">
+							<ul>
+								<li><a rel="noreferrer noopener" class="bottomBorderHover"
+										href="https://docs.zincsearch.com/02_getting-started/">Get Started</a>
+								</li>
+								<li><a rel="noreferrer noopener" class="bottomBorderHover"
+										href="https://docs.zincsearch.com/API%20Reference/">Server API</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="bottomFooter noPadding">
+				<div class="container">
+					<div class="column">
+						<ul class="socialMedia">
+							<li>
+								<a rel="noreferrer noopener" href="https://github.com/zinclabs/zinc" title="GitHub" target="_blank">
+									<img src="./assets/images/common/github_icon.svg" alt="GitHub" />
+								</a>
+							</li>
+							<li>
+								<a rel="noreferrer noopener" href="https://www.linkedin.com/company/zinc-labs" title="LinkedIn"
+									target="_blank">
+									<img src="./assets/images/common/linkedin_icon.svg" alt="LinkedIn" />
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="column">
+						<p>&copy; Copyright by Zinc Labs Inc. All rights reserved.</p>
+					</div>
+				</div>
+			</section>
+		</footer>
+	</div>
+
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+	<script async defer src="./assets/js/mainFunctions.js"></script>
+	<script async defer src="./assets/js/carousel.js"></script>
+	<script async defer src="./assets/js/subscription-script.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QP72SPHZNE"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js',new Date());
+
+		gtag('config','G-QP72SPHZNE');
+	</script>
+</body>
+
+</html>
